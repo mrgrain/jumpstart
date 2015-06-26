@@ -1,2 +1,2 @@
-# jumpstart
-Jumpstart your WordPress development with this modern plugin boilerplate.
+# Jumpstart
+Jumpstart your WordPress development with the freshest plugin boilerplate.
