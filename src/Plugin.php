@@ -13,8 +13,8 @@ use Jumpstart\Trampoline\I18n;
  * version of the plugin.
  *
  * @since      {{version}}
- * @package    {{package}}
- * @author     {{author}} <{{author_url}}>
+ * @package    {{namespace}}
+ * @author     {{author}} ({{author_url}})
  */
 class Plugin
 {

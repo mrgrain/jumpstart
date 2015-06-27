@@ -1,19 +1,19 @@
 <?php
 /**
- * Try to find and include an autload file.
+ * Try to find and include an autoload file.
  *
  * The script will look for a vendor/autoload.php in the following locations:
  * - current plugin directory
  * - WordPress plugin directory
  * - WordPress root directory
  *
- * Additionally, it will look for the autload.php must-use plugin
+ * Additionally, it will look for the autoload.php must-use plugin
  * in the mu-plugins directory.
  *
  *
  * @link        {{url}}
  * @since       {{version}}
- * @package     {{package}}
+ * @package     {{namespace}}
  */
 
 foreach(

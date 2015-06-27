@@ -1,5 +1,5 @@
 <?php
-namespace Vender\Plugin\Core;
+namespace Vendor\Plugin\Core;
 
 /**
  * Fired when the plugin is uninstalled.
@@ -18,9 +18,9 @@ namespace Vender\Plugin\Core;
  * general skeleton and outline for how the file should work.
  *
  * @since      {{version}}
- * @package    {{package}}
+ * @package    {{namespace}}
  * @subpackage Core
- * @author     {{author}} <{{author_url}}>
+ * @author     {{author}} ({{author_url}})
  */
 class Uninstaller
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Vender\Plugin\Core;
+namespace Vendor\Plugin\Core;
 
 /**
  * Fired during plugin activation.
@@ -7,9 +7,9 @@ namespace Vender\Plugin\Core;
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      {{version}}
- * @package    {{package}}
+ * @package    {{namespace}}
  * @subpackage Core
- * @author     {{author}} <{{author_url}}>
+ * @author     {{author}} ({{author_url}})
  */
 class Activator
 {

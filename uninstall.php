@@ -1,12 +1,12 @@
 <?php
-namespace Vender\Plugin;
+namespace Vendor\Plugin;
 
 /**
  * Fired when the plugin is uninstalled.
  *
  * @link        {{url}}
  * @since       {{version}}
- * @package     {{package}}
+ * @package     {{namespace}}
  */
 
 // If uninstall not called from WordPress, then exit.

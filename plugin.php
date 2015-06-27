@@ -1,10 +1,10 @@
 <?php
-namespace Vender\Plugin;
+namespace Vendor\Plugin;
 
 /**
  * @link              {{url}}
  * @since             {{version}}
- * @package           {{package}}
+ * @package           {{namespace}}
  *
  * @wordpress-plugin
  * Plugin Name:       {{plugin_name}}
