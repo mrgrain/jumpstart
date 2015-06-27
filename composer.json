@@ -3,6 +3,8 @@
   "description": "Jumpstart your WordPress development with the freshest plugin boilerplate.",
   "minimum-stability": "dev",
   "license": "GPL-3.0+",
+  "keywords": ["wordpress", "plugin", "boilerplate"],
+  "type": "project",
   "authors": [
     {
       "name": "Moritz Kornher",
@@ -10,15 +12,12 @@
     }
   ],
   "scripts": {
-    "post-create-project-cmd": "Jumpstart\\Init::createProject",
-    "deploy": "Jumpstart\\Publish::publish"
-  },
-  "require": {
-    "mrgrain/jumpstart-trampoline": "~1.0.0"
+    "jumpstart": "Jumpstart\\Init::jumpstart",
+    "publish": "Jumpstart\\Deploy::publish"
   },
   "require-dev": {
-    "mrgrain/jumpstart-init": "~1.0.0",
-    "mrgrain/jumpstart-publish": "~1.0.0"
+    "mrgrain/jumpstart-init": "1.0.0",
+    "mrgrain/jumpstart-deploy": "0.1.0"
   },
   "autoload": {
     "psr-4": {
