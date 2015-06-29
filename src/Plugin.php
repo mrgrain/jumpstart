@@ -3,6 +3,7 @@ namespace Vendor\Plugin;
 
 use Jumpstart\Trampoline\Loader;
 use Jumpstart\Trampoline\I18n;
+use Jumpstart\Trampoline\Component;
 
 /**
  * The core plugin class.
@@ -60,7 +61,7 @@ class Plugin
         $this->slug = '{{plugin_slug}}';
         $this->version = '{{version}}';
 
-        $this->loader = new Loader($this->getSlug(), $this->getVersion());
+        $this->loader = new Loader($this->getSlug(), $this->getVersion(), dirname(__FILE__));
         $this->setLocale();
 
         $this->jumpstart();
@@ -107,9 +108,9 @@ class Plugin
      */
     protected function setLocale()
     {
-        $i18n = new I18n();
+        $i18n = new I18n(dirname(__FILE__));
         $i18n->setDomain($this->getSlug());
-        $this->loader->action('plugins_loaded', $i18n, 'loadTextdomain');
+        $this->loader->action('plugins_loaded', array($i18n, 'loadTextdomain'));
     }
 
     /**
