@@ -1,7 +1,6 @@
 {
   "name": "mrgrain/jumpstart",
   "description": "Jumpstart your WordPress development with the freshest plugin boilerplate.",
-  "minimum-stability": "dev",
   "license": "GPL-3.0+",
   "keywords": ["wordpress", "plugin", "boilerplate"],
   "type": "wordpress-plugin",
@@ -15,6 +14,8 @@
     "jumpstart": ["Jumpstart\\Init::jumpstart", "composer update"],
     "publish": "Jumpstart\\Deploy::publish"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
     "composer/installers": "~1.0",
     "mrgrain/jumpstart-trampoline": "~1.0"
