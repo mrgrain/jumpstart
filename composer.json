@@ -1,7 +1,7 @@
 {
   "name": "mrgrain/jumpstart",
   "description": "Jumpstart your WordPress development with the freshest plugin boilerplate.",
-  "minimum-stability": "beta",
+  "minimum-stability": "dev",
   "license": "GPL-3.0+",
   "keywords": ["wordpress", "plugin", "boilerplate"],
   "type": "wordpress-plugin",
