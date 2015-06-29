@@ -4,7 +4,7 @@
   "minimum-stability": "beta",
   "license": "GPL-3.0+",
   "keywords": ["wordpress", "plugin", "boilerplate"],
-  "type": "project",
+  "type": "wordpress-plugin",
   "authors": [
     {
       "name": "Moritz Kornher",
@@ -16,6 +16,7 @@
     "publish": "Jumpstart\\Deploy::publish"
   },
   "require": {
+    "composer/installers": "~1.0",
     "mrgrain/jumpstart-trampoline": "~1.0"
   },
   "require-dev": {
