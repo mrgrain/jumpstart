@@ -18,7 +18,7 @@
   "prefer-stable": true,
   "require": {
     "composer/installers": "~1.0",
-    "mrgrain/jumpstart-trampoline": "~1.0"
+    "mrgrain/jumpstart-battery": "~1.0"
   },
   "require-dev": {
     "mrgrain/jumpstart-init": "@beta",
