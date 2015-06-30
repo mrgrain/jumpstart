@@ -37,4 +37,4 @@ register_deactivation_hook(__FILE__, 'Core\Deactivator::deactivate');
 /**
  * Jumpstart your plugin
  */
-(new Plugin())->run();
+(new Plugin())->jumpstart();
