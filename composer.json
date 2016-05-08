@@ -11,7 +11,7 @@
     }
   ],
   "scripts": {
-    "jumpstart": ["Jumpstart\\Init::jumpstart", "composer update"],
+    "jumpstart": ["Jumpstart\\Init::jumpstart", "composer dump-autoload"],
     "publish": "Jumpstart\\Deploy::publish"
   },
   "minimum-stability": "dev",
