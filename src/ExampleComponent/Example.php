@@ -77,9 +77,24 @@ class Example extends Component
          * Add Actions & Filters:
          * $tag, $function, $priority = 10, $accepted_args = 1
          */
-        $this->loader->action('action_name', function () {
-        }, 10, 1);
         //$this->loader->filter('filter_name', function () {}, 10, 1);
+        //$this->loader->action('action_name', function () {}, 10, 1);
+
+        /**
+         * Example kittens filter
+         */
+        $this->loader->filter('the_content', function ($content) {
+            $giphy = file_get_contents('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kittens');
+            if ($giphy && ($giphy = json_decode($giphy)) && $giphy->data && $giphy->data->fixed_height_downsampled_url) {
+                $content = '
+                    <figure class="wp-caption alignnone">
+                        <img src="' . $giphy->data->fixed_height_downsampled_url . '" alt="Cool kittens">
+                        <figcaption class="wp-caption-text">Jumpstart kittens - Proudly presented by your example component</figcaption>
+                    </figure>
+                ' . $content;
+            }
+            return $content;
+        }, 10, 1);
 
         /**
          * Enqueue: Styles & Scripts
