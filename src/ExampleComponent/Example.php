@@ -79,15 +79,14 @@ class Example extends Component
          */
         $this->loader->action('action_name', function () {
         }, 10, 1);
-        $this->loader->filter('filter_name', function () {
-        }, 10, 1);
+        //$this->loader->filter('filter_name', function () {}, 10, 1);
 
         /**
          * Enqueue: Styles & Scripts
          * style: $src, $deps = array(), $type = both|wp|admin, $media = 'all'
          * style: $src, $deps = array(), $type = both|wp|admin, $in_footer = false
          */
-        $this->loader->style('resource.css', array(), 'both', 'all');
-        $this->loader->script('resource.js', array(), 'wp', false);
+        //$this->loader->style('resource.css', array(), 'both', 'all');
+        //$this->loader->script('resource.js', array(), 'wp', false);
     }
 }
