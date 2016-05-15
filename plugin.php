@@ -18,23 +18,16 @@ namespace Vendor\Plugin;
  * Domain Path:       /languages
  */
 
-// If this file is called directly, abort.
+
+/**
+ * If this file is called directly, abort.
+ */
 if (!defined('WPINC')) {
     die;
 }
 
 /**
- * Autoload
- */
-require_once(__DIR__ . '/autoload.php');
-
-/**
- * Activator and Deactivator
- */
-register_activation_hook(__FILE__, 'Core\Activator::activate');
-register_deactivation_hook(__FILE__, 'Core\Deactivator::deactivate');
-
-/**
  * Jumpstart your plugin
  */
-(new Plugin())->jumpstart();
+require_once(__DIR__ . 'src/autoload.php');
+(new Plugin(__FILE__))->jumpstart();

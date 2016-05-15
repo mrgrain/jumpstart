@@ -1,11 +1,11 @@
 <?php
-namespace Vendor\Plugin;
+namespace Vendor\Plugin\ExampleComponent;
 
 use Jumpstart\Battery\Component;
 use Jumpstart\Battery\Loader;
 
 /**
- * A sample Component class.
+ * An example component class.
  *
  * Use this as a based to create your own components:
  * - Add your dependencies to the constructor
@@ -16,15 +16,25 @@ use Jumpstart\Battery\Loader;
  * @package    {{namespace}}
  * @author     {{author}} ({{author_url}})
  */
-class SampleComponent extends Component
+class Example extends Component
 {
+    /**
+     * The loader that's responsible for maintaining and registering all hooks that power
+     * the component.
+     *
+     * @since       1.0.0
+     * @access      protected
+     * @var         Loader $loader Maintains and registers all hooks for the plugin.
+     */
+    protected $loader;
+
     /**
      * Initialize the Component from the parent plugin.
      *
      * Add your dependencies (e.g. Loader, Path, Slug) to the constructor.
      *
      * @since   {{version}}
-     * @param   Loader      $loader
+     * @param   Loader $loader
      */
     public function __construct(Loader $loader)
     {
@@ -36,9 +46,7 @@ class SampleComponent extends Component
         /**
          * Check and run your Component
          */
-        if ($this->conditions()) {
-            $this->run();
-        }
+        parent::__construct();
     }
 
     /**
@@ -69,8 +77,10 @@ class SampleComponent extends Component
          * Add Actions & Filters:
          * $tag, $function, $priority = 10, $accepted_args = 1
          */
-        $this->loader->action('action_name', function() {}, 10, 1);
-        $this->loader->filter('filter_name', function() {}, 10, 1);
+        $this->loader->action('action_name', function () {
+        }, 10, 1);
+        $this->loader->filter('filter_name', function () {
+        }, 10, 1);
 
         /**
          * Enqueue: Styles & Scripts

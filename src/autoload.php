@@ -11,14 +11,12 @@
  * in the mu-plugins directory.
  *
  *
- * @link        {{url}}
- * @since       {{version}}
- * @package     {{namespace}}
+ * @link        https://wordpress.jumpstart.rocks
  */
-
-foreach(
+// Load
+foreach (
     array(
-        plugin_dir_path(__FILE__) . '/vendor/autoload.php',
+        plugin_dir_path(dirname(__FILE__)) . '/vendor/autoload.php',
         WP_PLUGIN_DIR . '/vendor/autoload.php',
         ABSPATH . '/vendor/autoload.php',
         WPMU_PLUGIN_DIR . '/autoload.php',

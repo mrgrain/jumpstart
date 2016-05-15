@@ -1,8 +1,8 @@
 <?php
 namespace Vendor\Plugin;
 
-use Jumpstart\Battery\Loader;
 use Jumpstart\Battery\I18n;
+use Vendor\Plugin\ExampleComponent\Example as ExampleComponent;
 
 /**
  * The core plugin class.
@@ -26,16 +26,15 @@ class Plugin extends \Jumpstart\Battery\Plugin
      *
      * @since       {{version}}
      * @access      public
+     * @param string $filename
      */
-    public function __construct()
+    public function __construct($filename)
     {
         $this->slug = '{{plugin_slug}}';
         $this->version = '{{version}}';
-        $this->path = dirname(__FILE__);
-        $this->loader = new Loader($this->getSlug(), $this->getVersion(), $this->getPath());
 
         // Run the plugin
-        parent::__construct();
+        parent::__construct($filename);
     }
 
     /**
@@ -52,12 +51,13 @@ class Plugin extends \Jumpstart\Battery\Plugin
          * - SampleComponent as an example, add your functionality there.
          */
         new I18n($this->getSlug(), $this->getPath(), $this->getLoader());
-        new SampleComponent($this->getLoader());
+        new ExampleComponent($this->getLoader());
 
         /**
          * For a small plugin, you might want to define your actions directly in here:
          */
-        $this->loader->action('action_name', function() {}, 10, 1);
+        $this->loader->action('action_name', function () {
+        }, 10, 1);
         $this->loader->style('resource.css', array(), 'both', 'all');
     }
 }
