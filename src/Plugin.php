@@ -56,8 +56,7 @@ class Plugin extends \Jumpstart\Battery\Plugin
         /**
          * For a small plugin, you might want to define your actions directly in here:
          */
-        $this->loader->action('action_name', function () {
-        }, 10, 1);
-        $this->loader->style('resource.css', array(), 'both', 'all');
+        //$this->loader->action('action_name', function () {}, 10, 1);
+        //$this->loader->style('resource.css', array(), 'both', 'all');
     }
 }
