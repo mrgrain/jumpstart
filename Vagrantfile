@@ -23,6 +23,7 @@ Vagrant.configure("2") do |config|
 
     # provisioning
     config.vm.provision "shell", inline: <<-SHELL
+        sudo chown -R vagrant:vagrant /var/www
         cd /var/www
         sudo composer create-project --no-dev --prefer-dist mrgrain/autobahn .
         cp -n .env.example .env
